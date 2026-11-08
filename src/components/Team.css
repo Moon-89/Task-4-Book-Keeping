@@ -1,0 +1,62 @@
+.team {
+  padding-bottom: 0 !important;
+}
+
+.team-heading {
+  text-align: center;
+  margin-bottom: 96px;
+}
+
+.team-heading .title-with-line {
+  margin-bottom: 8px;
+}
+
+/* 3 cards per row (30px space between) */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+}
+
+.person {
+  background: #fff;
+  border: 1px solid var(--border);
+  text-align: center;
+  margin-bottom: 98px;
+}
+
+/* Round photo that sticks out above the card */
+.person img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: -50px auto 0;
+}
+
+.person-content {
+  padding: 50px 20px 20px;
+}
+
+.person h3 {
+  font-size: 20.8px;
+  color: #000;
+}
+
+.person .role {
+  display: block;
+  margin-bottom: 16px;
+}
+
+/* Tablet: 2 per row */
+@media (max-width: 991px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: 1 per row */
+@media (max-width: 767px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}

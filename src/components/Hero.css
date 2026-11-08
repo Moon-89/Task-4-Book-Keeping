@@ -1,0 +1,131 @@
+/* margin-top makes room for the floating header */
+.hero {
+  position: relative;
+  overflow: hidden;
+  margin-top: 96px;
+}
+
+.hero-track {
+  display: flex;
+}
+
+.hero-slide {
+  position: relative;
+  flex: 0 0 100%;
+  height: 100vh;
+  min-height: 900px;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+/* Dark layer on top of the photo */
+.hero-slide::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-slide .container {
+  position: relative;
+}
+
+/* Text box = 7 of 12 columns, centered */
+.hero-content {
+  width: 58.333%;
+  margin: 0 auto;
+}
+
+.hero-content.lower {
+  margin-top: 96px;
+}
+
+.hero h1,
+.hero h2 {
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 1;
+  color: #fff;
+}
+
+.hero p {
+  color: #fff;
+  font-size: 20px;
+}
+
+/* Arrows: only visible when the mouse is over the slider */
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: #fff;
+  color: inherit;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.hero-arrow.left {
+  left: 20px;
+}
+
+.hero-arrow.right {
+  right: 20px;
+}
+
+.hero:hover .hero-arrow {
+  opacity: 0.7;
+  visibility: visible;
+}
+
+.hero .hero-arrow:hover {
+  opacity: 1;
+}
+
+/* Dots (small lines) */
+.hero-dots {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dot {
+  width: 20px;
+  height: 4px;
+  margin: 2px 5px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #fff;
+}
+
+/* ---------- Tablet & mobile ---------- */
+@media (max-width: 991px) {
+  .hero h1,
+  .hero h2 {
+    font-size: 34px;
+  }
+}
+
+/* Mobile: text box full width */
+@media (max-width: 767px) {
+  .hero-content {
+    width: 100%;
+  }
+}

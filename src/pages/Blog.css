@@ -1,0 +1,43 @@
+.blog {
+  padding-bottom: 0 !important;
+}
+
+/* 3 posts per row (30px space between) */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+}
+
+.blog-grid .news-item {
+  margin-bottom: 48px;
+}
+
+.pagination-wrap {
+  padding-bottom: 48px;
+}
+
+/* Round page number buttons */
+.pagination a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: 700;
+  color: var(--primary);
+  background: rgba(85, 119, 180, 0.1);
+}
+
+.pagination a:hover {
+  background: var(--primary-light);
+  color: #fff;
+}
+
+/* Tablet & mobile: 1 per row */
+@media (max-width: 991px) {
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+}

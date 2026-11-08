@@ -1,0 +1,59 @@
+.subscribe {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Dark blue layer on top of the photo */
+.subscribe::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--dark-blue);
+  opacity: 0.7;
+}
+
+/* Row with 7 + 5 columns (30px space between) */
+.subscribe-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.subscribe-text {
+  flex: 7;
+}
+
+.subscribe-form {
+  flex: 5;
+}
+
+.subscribe h2,
+.subscribe p {
+  color: #fff;
+}
+
+.form-row {
+  display: flex;
+}
+
+.form-row .input {
+  flex: 1;
+  min-width: 0;
+  padding: 16px 12px;
+  margin-right: 8px;
+}
+
+.form-row .btn {
+  padding: 16px 24px;
+}
+
+/* Tablet & mobile: text on top, form below */
+@media (max-width: 991px) {
+  .subscribe-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+}

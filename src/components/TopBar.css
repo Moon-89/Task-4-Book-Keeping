@@ -1,0 +1,24 @@
+.topbar {
+  background: var(--light-bg);
+  padding: 8px 0;
+  font-size: 13.125px;
+  line-height: 26px;
+}
+
+.topbar a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 16px;
+}
+
+.topbar a:hover {
+  color: var(--dark-blue);
+}
+
+/* Tablet & mobile: hide the links, keep a thin grey strip (same as the reference) */
+@media (max-width: 991px) {
+  .topbar a {
+    display: none;
+  }
+}

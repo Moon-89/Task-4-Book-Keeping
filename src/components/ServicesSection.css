@@ -1,0 +1,88 @@
+.services {
+  background: var(--light-bg);
+  padding-bottom: 0 !important;
+}
+
+.services-heading {
+  text-align: center;
+  margin-bottom: 96px;
+}
+
+.services-heading .title-with-line {
+  margin-bottom: 0;
+}
+
+/* 3 cards per row (30px space between) */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+}
+
+.service-card {
+  background: #fff;
+  margin-bottom: 100px;
+}
+
+/* Hexagon shape = a box + two rotated squares (top and bottom) */
+.hexagon {
+  position: relative;
+  width: 96px;
+  height: 55.43px;
+  margin: -33.94px auto 0;
+  background: var(--primary-light);
+  color: #fff;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.hexagon::before,
+.hexagon::after {
+  content: '';
+  position: absolute;
+  left: 14.06px;
+  width: 67.88px;
+  height: 67.88px;
+  background: inherit;
+  transform: scaleY(0.5774) rotate(-45deg);
+  z-index: -1;
+}
+
+.hexagon::before {
+  top: -33.94px;
+}
+
+.hexagon::after {
+  bottom: -33.94px;
+}
+
+.service-content {
+  padding: 50px 20px 20px;
+  text-align: center;
+}
+
+.service-content h3 {
+  font-size: 20.8px;
+  color: #000;
+}
+
+.service-content .btn {
+  padding: 14px 24px;
+}
+
+/* Tablet: 2 per row */
+@media (max-width: 991px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: 1 per row */
+@media (max-width: 767px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}

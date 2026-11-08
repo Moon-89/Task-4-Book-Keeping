@@ -1,0 +1,28 @@
+/* Heading = 4 of 12 columns */
+.news-heading {
+  width: calc((100% + 30px) / 3 - 30px);
+  margin-bottom: 48px;
+}
+
+.news-heading .title-with-line {
+  margin-bottom: 8px;
+}
+
+/* 3 posts per row (30px space between) */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Tablet & mobile: one under the other */
+@media (max-width: 991px) {
+  .news-heading {
+    width: 100%;
+  }
+
+  .news-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

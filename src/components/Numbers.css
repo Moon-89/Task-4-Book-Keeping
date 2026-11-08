@@ -1,0 +1,33 @@
+.numbers-section {
+  padding-top: 0 !important;
+}
+
+/* 4 boxes in a row (30px space between) */
+.numbers {
+  display: flex;
+  gap: 30px;
+}
+
+.number-box {
+  flex: 1;
+}
+
+.number-box strong {
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  color: #000;
+}
+
+.number-box span {
+  display: block;
+  font-size: 15px;
+}
+
+/* Tablet & mobile: one under the other */
+@media (max-width: 991px) {
+  .numbers {
+    flex-direction: column;
+    gap: 0;
+  }
+}

@@ -1,0 +1,173 @@
+/* Row: post (8 columns) + sidebar (4 columns), 30px space between */
+.single {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.blog-content {
+  flex: 0 0 calc((100% + 30px) * 8 / 12 - 30px);
+  min-width: 0;
+}
+
+.sidebar {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ---------- Post text ---------- */
+.lead {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+blockquote {
+  margin: 0 0 16px;
+}
+
+.space-top {
+  padding-top: 48px;
+}
+
+.big-gap {
+  margin-bottom: 48px;
+}
+
+/* ---------- Comments ---------- */
+.comment-list .comment {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.comment-photo {
+  width: 80px;
+}
+
+.comment-photo img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.comment-body {
+  width: calc(100% - 80px);
+}
+
+.comment-body h3 {
+  font-size: 20px;
+  color: #000;
+}
+
+.comment-body .meta {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: #6b6b6b;
+}
+
+.reply {
+  padding: 5px 10px;
+  background: #e5e5e5;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.reply:hover {
+  color: #000;
+  background: #e3e3e3;
+}
+
+/* Replies are moved a little to the right */
+.comment-list .children {
+  width: 100%;
+  padding: 50px 0 0 40px;
+}
+
+.comment-list .children .comment:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Sidebar ---------- */
+.sidebar-box {
+  margin-bottom: 30px;
+  padding: 25px;
+  font-size: 15px;
+  background: #fff;
+}
+
+.sidebar-box > :last-child {
+  margin-bottom: 0;
+}
+
+.sidebar-box h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.sidebar-box h3.black {
+  color: #000;
+}
+
+/* Search box with icon on the right */
+.search-form {
+  position: relative;
+  background: #f7f7f7;
+  padding: 10px;
+}
+
+.search-form .input {
+  padding-right: 50px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+/* Category list with numbers on the right */
+.categories li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted var(--border);
+}
+
+.categories li:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.categories a {
+  display: block;
+}
+
+.categories span {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #6b6b6b;
+}
+
+.author-photo {
+  width: 50%;
+  border-radius: 50%;
+  margin-bottom: 24px;
+}
+
+/* Mobile: sidebar goes under the post */
+@media (max-width: 767px) {
+  .single {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .blog-content,
+  .sidebar {
+    flex: none;
+    width: 100%;
+  }
+}
